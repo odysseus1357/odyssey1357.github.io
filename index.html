@@ -27,24 +27,15 @@
       animation-timing-function: linear;
     }
     @keyframes fall {
-      to {
-        transform: translateY(110vh) translateX(20px);
-        opacity: 0;
-      }
+      to { transform: translateY(110vh) translateX(20px); opacity: 0; }
     }
     /* Esoteric symbols overlay */
     body::before {
       content: "✶ ✨ ☽ ☀︎ ☆ ☌ ♁ ♎︎";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 200%;
-      height: 200%;
-      font-size: 100px;
-      color: var(--accent-text);
-      opacity: 0.02;
-      pointer-events: none;
-      z-index: 0;
+      position: fixed; top: 0; left: 0;
+      width: 200%; height: 200%;
+      font-size: 100px; color: var(--accent-text);
+      opacity: 0.02; pointer-events: none; z-index: 0;
     }
     header, section, footer { position: relative; z-index: 1; }
     a { color: var(--accent-text); text-decoration: none; }
@@ -52,64 +43,53 @@
     header h1 { margin: 1rem 0; font-size: 2.5rem; }
     header p { font-size: 1.2rem; }
     .hero-placeholder {
-      width: 300px;
-      height: 300px;
+      width: 300px; height: 300px;
       margin: 2rem auto 0;
-      background-color: rgba(204, 159, 65, 0.2);
+      background-color: rgba(204,159,65,0.2);
       border: 2px dashed var(--accent-text);
-      display: flex;
-      align-items: center;
+      display: flex; align-items: center;
       justify-content: center;
-      color: var(--accent-text);
-      font-size: 1rem;
+      color: var(--accent-text); font-size: 1rem;
     }
     section { padding: 4rem 1rem; max-width: 1000px; margin: 0 auto; }
     h2 { font-size: 2rem; text-align: center; margin-bottom: 1rem; }
-    /* About section card placeholders */
     .card-placeholders {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 1rem; margin-top: 2rem;
     }
     .card-placeholder {
-      width: 200px;
-      height: 300px;
-      background-color: rgba(204, 159, 65, 0.2);
+      width: 200px; height: 300px;
+      background-color: rgba(204,159,65,0.2);
       border: 2px dashed var(--accent-text);
-      display: flex;
-      align-items: center;
+      display: flex; align-items: center;
       justify-content: center;
-      color: var(--accent-text);
-      font-size: 0.9rem;
+      color: var(--accent-text); font-size: 0.9rem;
     }
-    /* Features images size */
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 2rem; }
     .feature-item { text-align: center; }
     .feature-item img { width: 300px; height: 614px; object-fit: cover; margin-bottom: 1rem; }
     .languages ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; padding: 0; }
     .languages li { background-color: var(--accent-text); color: var(--accent-bg); padding: 0.5rem 1rem; border-radius: 20px; }
     .btn-download {
-      display: inline-block;
-      margin-top: 1.5rem;
+      display: inline-block; margin-top: 1.5rem;
       padding: 0.75rem 1.5rem;
       background-color: var(--accent-text);
       color: var(--accent-bg);
-      border-radius: 4px;
-      font-weight: bold;
+      border-radius: 4px; font-weight: bold;
     }
-    footer { text-align: center; padding: 2rem 1rem; font-size: 0.9rem; }
-    .contact { text-align: center; }
+    /* Center align download section */
+    #download { text-align: center; }
+    /* Left align contact section */
+    .contact { text-align: left; }
     .contact p { font-size: 1rem; }
     .contact a { font-weight: bold; }
+    footer { text-align: center; padding: 2rem 1rem; font-size: 0.9rem; }
   </style>
 </head>
 <body>
   <header>
     <h1>Aleister: Daily Tarot</h1>
     <p>Daily insights, guidance, and inspiration from Tarot cards</p>
-    <!-- Hero Image Placeholder -->
     <div>
       <img src="img/logo.png" alt="Card of the Day">
     </div>
@@ -122,16 +102,11 @@
     <p>Set personalized notifications to draw your card at the perfect moment—morning intention setting, midday reflection, or evening wind-down.</p>
     <p>Dive into the full 78-card deck with high-resolution artwork and learn each card's upright and reversed meanings. Build your Tarot knowledge library with keyword search, bookmarking favorite cards, and tracking past readings.</p>
     <p>Available in nine languages for global Tarot enthusiasts: English, French, Italian, German, Ukrainian, Russian, Portuguese, Spanish, and Dutch.</p>
-    <!-- Card images -->
     <div class="card-placeholders">
-      <img src="img/card1.png" alt="Tarot Card 1" class="card-image">
-      <img src="img/card2.png" alt="Tarot Card 2" class="card-image">
-      <img src="img/card3.png" alt="Tarot Card 3" class="card-image">
-      <img src="img/card4.png" alt="Tarot Card 4" class="card-image">
-    </div>
-      
-      
-      
+      <img src="img/card1.png" alt="Tarot Card 1">
+      <img src="img/card2.png" alt="Tarot Card 2">
+      <img src="img/card3.png" alt="Tarot Card 3">
+      <img src="img/card4.png" alt="Tarot Card 4">
     </div>
   </section>
 
@@ -143,18 +118,17 @@
         <h3>Card of the Day</h3>
         <p>Each morning, receive a unique Tarot card drawn from a mystical deck. Discover its meaning, daily prediction, and a gentle prompt to guide your decisions. Perfect for setting intentions and enhancing mindfulness.</p>
       </div>
-
       <div class="feature-item">
-        <img src="img/feature2.png" alt="Card of the Day">
+        <img src="img/feature2.png" alt="Full Deck Exploration">
         <h3>Full Deck Exploration</h3>
         <p>Unlock the complete 78-card Tarot deck at your fingertips. Browse Major and Minor Arcana cards, read comprehensive descriptions, and learn symbolism, history, and reversed interpretations to deepen your practice.</p>
       </div>
-
       <div class="feature-item">
         <img src="img/feature3.png" alt="Detailed Analysis">
         <h3>Detailed Contextual Analysis</h3>
         <p>Get tailored insights into Love, Career, and Spirituality based on your Card of the Day. Understand how the card’s energies affect relationships, professional growth, and inner development.</p>
-      </div>      
+      </div>
+    </div>
   </section>
 
   <section class="languages" id="languages">
@@ -184,7 +158,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Aleister: Daily Tarot. All rights reserved.</p>
+    <p>© 2025 Aleister: Daily Tarot. All rights reserved.</p>
   </footer>
 
   <script>
@@ -192,15 +166,15 @@
     const createStar = () => {
       const star = document.createElement('div');
       star.classList.add('star');
-      star.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-      const size = Math.random() * 1.5 + 0.5;
-      star.style.fontSize = size + 'rem';
-      star.style.left = Math.random() * 100 + 'vw';
-      star.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      star.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+      const size = Math.random()*1.5+0.5;
+      star.style.fontSize = size+'rem';
+      star.style.left = Math.random()*100+'vw';
+      star.style.animationDuration = (Math.random()*5+5)+'s';
       document.body.appendChild(star);
-      star.addEventListener('animationend', () => star.remove());
+      star.addEventListener('animationend',()=>star.remove());
     };
-    setInterval(createStar, 300);
+    setInterval(createStar,300);
   </script>
 </body>
 </html>
